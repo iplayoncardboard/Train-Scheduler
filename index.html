@@ -8,9 +8,68 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel='stylesheet'>
     <link href='./assets/css/style.css' rel='stylesheet'>
     <script src="./assets/javascript/jquery-3.3.1.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
 </head>
 <body>
-    <h1 id="test"></h1>
+    <div class="container">
+        <div class='jumbotron'>
+            <h1 class="display-4">Hello, world!</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+             <hr class="my-4">
+        </div>
+        <div class='my-2'>
+            <div>
+                <p class='bg-primary text-white p-1 font-weight-bold'>Current Schedule</p>
+            </div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Mark</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+          <div class='my-2'>
+            <div>
+                <p class='bg-primary text-white p-1 font-weight-bold'>Add a Train</p>
+            </div>
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Train Name</label>
+              <input type="text" class="form-control" id="train-name"  placeholder="Train Name">
+            </div>
+            <div class="form-group">
+                <label for="destination">Destination</label>
+                <input type="text" class="form-control" id="destination"  placeholder="Enter Destination">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">First Train Time (HH-mm military time)</label>
+                <input type="text" class="form-control" id="first-time"  placeholder="First Train Time (HH-mm military time)">
+                <small id="emailHelp" class="form-text text-muted">(HH-mm military time)</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Frequency (min)</label>
+                <input type="number" class="form-control" id="frequency"  placeholder="Frequency">
+                <small id="emailHelp" class="form-text text-muted">In minutes</small>
+              </div>
+           
+            <button id='submit' type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+    </div>
     <script src='./assets/javascript/app.js'></script>
 </body>
 </html>
