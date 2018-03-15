@@ -52,15 +52,19 @@ database.ref().on('child_added',(snap, prevChildKey)=>{
   let frequency =snap.val().frequency;
 
   //parse first time into moment
-  let parsedTime = moment(firstTime, 'HH:mm')
+  let parsedTime = moment(firstTime, 'HH-mm');
+  // let parsedTime =
   console.log(JSON.stringify(parsedTime));
 
   //Calculate next arrival
-
+  let nextArrival = parsedTime.add(frequency,'m');
+  console.log(JSON.stringify(nextArrival));
   //Calculate minutes away
+  let minutesAway = nextArrival.subtract(moment()).format('m');
+  console.log(JSON.stringify(minutesAway));
 
   //Display that stuff!!!
-
+  
   console.log(snap.val());
   
 
