@@ -52,20 +52,27 @@ database.ref().on('child_added',(snap, prevChildKey)=>{
   let frequency =snap.val().frequency;
 
   //parse first time into moment
-  let parsedTime = moment(firstTime, 'HH-mm');
-  // let parsedTime =
-  console.log(JSON.stringify(parsedTime));
+  let parsedTime = moment(firstTime, 'HH:mm').subtract(1,'years');
+  
+  
+  //Calculate minutes away
+  let difference = moment().diff(moment(parsedTime), 'minutes');
+  console.log('Difference: ', difference)
+
+  let remainder = difference % frequency;
+  console.log(remainder);
+
+  let minutesAway = frequency-remainder;
+  console.log('Minutes Away', minutesAway);
 
   //Calculate next arrival
-  let nextArrival = parsedTime.add(frequency,'m');
-  console.log(JSON.stringify(nextArrival));
-  //Calculate minutes away
-  let minutesAway = nextArrival.subtract(moment()).format('m');
-  console.log(JSON.stringify(minutesAway));
+  let nextArrival = moment().add(minutesAway,'minutes').format('hh:mm a');
+ 
 
   //Display that stuff!!!
-  
-  console.log(snap.val());
-  
 
+  let colBrk = "</td><td>"
+
+  $('#schedule-table > tbody').append('<tr><td>' + trainName + colBrk + destination + colBrk+
+  frequency+colBrk+nextArrival+colBrk+minutesAway+'</td></tr>');
 });
