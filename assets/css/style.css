@@ -24,14 +24,10 @@ form{
 .lead {
     color: #C0C0C0;
     font-size: 2em;
+    display: inline;
 }
 
-#schedule-header, #add-a-med{
-    background-color:  rgb(255, 98, 176);
-    /* color: #01c0d0; */
-    color: #1be3f5;
-    margin-bottom: 0;
-}
+
 
 .btn-primary{
     color: silver;
@@ -46,4 +42,16 @@ form{
 
 .x{
     color:red;
+}
+
+#logo{
+    height: 200px;
+    
+}
+
+#schedule-header, #add-a-med{
+    background-color:  rgb(255, 98, 176);
+    /* color: #01c0d0; */
+    color: #1be3f5;
+    margin-bottom: 0;
 }
