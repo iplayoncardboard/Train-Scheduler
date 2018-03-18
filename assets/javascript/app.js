@@ -15,7 +15,7 @@
 //Event listener to gather form data.
 $('#submit').on('click',(event)=>{
   //prevent default button behavior
-  event.preventDefault();
+  event.preventDefault(); 
   //capture form values
   let trainName = $('#train-name').val().trim();
   let destination = $('#destination').val().trim();
@@ -43,7 +43,7 @@ $('#submit').on('click',(event)=>{
 
 
 //update table when value is added to firebase.
-database.ref().on('child_added',(snap, prevChildKey)=>{
+database.ref().on('child_added',(snap)=>{
 
   //function variables
   let trainName = snap.val().name;
@@ -73,6 +73,19 @@ database.ref().on('child_added',(snap, prevChildKey)=>{
 
   let colBrk = "</td><td>"
 
-  $('#schedule-table > tbody').append('<tr><td>' + trainName + colBrk + destination + colBrk+
-  frequency+colBrk+nextArrival+colBrk+minutesAway+'</td></tr>');
+  $('#schedule-table > tbody').append('<tr id="'+snap.key+'"><td>' + trainName + colBrk + destination + colBrk+
+  frequency+colBrk+nextArrival+colBrk+minutesAway+'</td><td class="x" data-name="'+snap.key+'">X</td></tr>');
 });
+
+$(document).on('click','.x', (event)=>{
+  let key = $(event.currentTarget).attr('data-name');
+  console.log(key);
+  database.ref().child(key).remove();
+  $('#'+key).remove();
+
+});
+
+
+function populateEntries(){
+  
+}

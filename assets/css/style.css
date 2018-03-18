@@ -1,5 +1,6 @@
 body{
     background-image: url(../images/background2.jpg);
+    font-family: 'Cherry Cream Soda', cursive;
 }
 
 tr{background-color: #fdfd96;}
@@ -10,16 +11,19 @@ form{
 
 .jumbotron{
     /* background-color: #1be3f5; */
-    background-color: rgb(1, 163, 163)
+    background-color: rgb(1, 163, 163);
+    font-family: 'Dancing Script', cursive;
 }
 
 .display-4{
     /* color: #dace82; */
     color: #fdfd96;
+    font-size: 5em;
 }
 
 .lead {
     color: #C0C0C0;
+    font-size: 2em;
 }
 
 #schedule-header, #add-a-med{
@@ -30,7 +34,7 @@ form{
 }
 
 .btn-primary{
-    color: #fdfd96;
+    color: silver;
     background-color:rgb(1, 163, 163);
     border: solid 1px rgb(1, 163, 163);
 }
@@ -40,3 +44,6 @@ form{
     border: solid 1px rgb(1, 163, 163);
 }
 
+.x{
+    color:red;
+}
