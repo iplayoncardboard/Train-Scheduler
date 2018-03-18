@@ -1,3 +1,42 @@
-#test{
-    color: blueviolet;
+body{
+    background-image: url(../images/background2.jpg);
 }
+
+tr{background-color: #fdfd96;}
+
+form{
+    background-color: #fdfd96;
+}
+
+.jumbotron{
+    /* background-color: #1be3f5; */
+    background-color: rgb(1, 163, 163)
+}
+
+.display-4{
+    /* color: #dace82; */
+    color: #fdfd96;
+}
+
+.lead {
+    color: #C0C0C0;
+}
+
+#schedule-header, #add-a-med{
+    background-color:  rgb(255, 98, 176);
+    /* color: #01c0d0; */
+    color: #1be3f5;
+    margin-bottom: 0;
+}
+
+.btn-primary{
+    color: #fdfd96;
+    background-color:rgb(1, 163, 163);
+    border: solid 1px rgb(1, 163, 163);
+}
+.btn-primary:hover{
+    background-color: #fdfd96;
+    color:rgb(1, 163, 163);
+    border: solid 1px rgb(1, 163, 163);
+}
+

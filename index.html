@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Momma's Little Yella Pills</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel='stylesheet'>
     <link href='./assets/css/style.css' rel='stylesheet'>
     <script src="./assets/javascript/jquery-3.3.1.min.js"></script>
@@ -14,21 +14,21 @@
 <body>
     <div class="container">
         <div class='jumbotron'>
-            <h1 class="display-4">Hello, world!</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <h1 class="display-4">Momma's Little Yella Pill Scheduler</h1>
+            <p class="lead">Track your medication times. Stay dosed. Stay happy.</p>
              <hr class="my-4">
         </div>
         <div class='my-2'>
             <div>
-                <p class='bg-primary text-white p-1 font-weight-bold'>Current Schedule</p>
+                <p id='schedule-header' class='p-1 font-weight-bold'>Current Schedule</p>
             </div>
             <table id="schedule-table" class="table">
                 <thead>
                 <tr>
-                    <th scope="col">Train Name</th>
-                    <th scope="col">Destination</th>
+                    <th scope="col">Medication Name</th>
+                    <th scope="col">Dosage</th>
                     <th scope="col">Frequency (min)</th>
-                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Next Dose</th>
                     <th scope="col">Minutes Away</th>
                 </tr>
                 </thead>
@@ -39,20 +39,20 @@
         </div>
           <div class='my-2'>
             <div>
-                <p class='bg-primary text-white p-1 font-weight-bold'>Add a Train</p>
+                <p id='add-a-med' class='p-1 font-weight-bold'>Add a Medication</p>
             </div>
-          <form>
+          <form class='px-2'>
             <div class="form-group">
-              <label for="exampleInputEmail1">Train Name</label>
+              <label for="exampleInputEmail1">Medication Name</label>
               <input type="text" class="form-control" id="train-name"  placeholder="Train Name">
             </div>
             <div class="form-group">
-                <label for="destination">Destination</label>
-                <input type="text" class="form-control" id="destination"  placeholder="Enter Destination">
+                <label for="destination">Dosage</label>
+                <input type="text" class="form-control" id="destination"  placeholder="Enter Dosage">
               </div>
               <div class="form-group">
-                <label for="exampleInputEmail1">First Train Time (HH-mm military time)</label>
-                <input type="text" class="form-control" id="first-time"  placeholder="First Train Time (HH-mm military time)">
+                <label for="exampleInputEmail1">First Dosage Time (HH-mm military time)</label>
+                <input type="text" class="form-control" id="first-time"  placeholder="First Dosage Time (HH-mm military time)">
                 <small id="emailHelp" class="form-text text-muted">(HH-mm military time)</small>
               </div>
               <div class="form-group">
@@ -61,7 +61,7 @@
                 <small id="emailHelp" class="form-text text-muted">In minutes</small>
               </div>
            
-            <button id='submit' type="submit" class="btn btn-primary">Submit</button>
+            <button id='submit' type="submit" class="btn btn-primary my-2">Pop Them Pills</button>
           </form>
         </div>
     </div>
