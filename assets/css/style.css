@@ -11,6 +11,7 @@ form{
 
 .jumbotron{
     /* background-color: #1be3f5; */
+    margin-top: 15px;
     background-color: rgb(1, 163, 163);
     font-family: 'Dancing Script', cursive;
 }
